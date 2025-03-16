@@ -3,7 +3,7 @@ from tkinter import messagebox
 import random
 
 class PiedraPapelTijeraApp:
-    def _init_(self, root):
+    def __init__(self, root):  # ← CORREGIDO
         self.root = root
         self.root.title("Piedra, Papel o Tijera")
 
@@ -36,7 +36,8 @@ class PiedraPapelTijeraApp:
         else:
             return "¡Perdiste!"
 
-if _name_ == "_main_":
+# ← CORREGIDO
+if __name__ == "__main__":
     root = tk.Tk()
     app = PiedraPapelTijeraApp(root)
-    root.mainloop()
+    root.mainloop()
